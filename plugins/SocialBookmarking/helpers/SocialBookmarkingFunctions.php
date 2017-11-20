@@ -79,7 +79,6 @@ function social_bookmarking_get_service($serviceCode)
 function social_bookmarking_toolbar($url, $title, $description='')
 {
     $html = '';
-    $html .= '<!-- AddThis Button BEGIN -->';
     $html .= '<div class="addthis_toolbox addthis_default_style addthis_32x32_style"';
     $html .= ' addthis:url="' . html_escape($url) . '" addthis:title="' . html_escape($title) . '" addthis:description="' . html_escape($description) . '">';
     $services = social_bookmarking_get_services();
@@ -90,11 +89,10 @@ function social_bookmarking_toolbar($url, $title, $description='')
             $html .= '<a class="addthis_button_' . html_escape($serviceCode) . '"></a>';
         }
     }
-    $html .= '<a class="addthis_button_compact"></a>';
-    //$html .= '<a class="addthis_counter addthis_bubble_style"></a>';
+    $html .= '</div>';
+    $html .= '</div>';
     $html .= '</div>';
     $html .= '<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>';
-    $html .= '<!-- AddThis Button END -->';
 
     return $html;
 }

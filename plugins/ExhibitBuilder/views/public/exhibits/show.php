@@ -6,19 +6,27 @@ $exhibit = metadata('exhibit','title');
 ?>
 
 <div class="row">
-    <div class="col-6 breadcrumbs hidden-sm">
-        <h4 class="breadcrumb"><?php echo link_to_home_page(__('Home')); ?></h4>
-        <h4 class="breadcrumb"><?php echo link_to('exhibits', '', 'Tentoonstellingen');?></h4>
-        <h4 class="breadcrumb"><?php echo link_to('exhibit/'.$exhibit,'',$exhibit)?></h4>
-        <h4 class="breadcrumb"><?php echo metadata('exhibit_page','title')?></h4>
-
-    </div>
+    <a href="https://www.arteveldehogeschool.be/mediatheek/live/ws/" class="mediatheeklink">
+        <div class="col-6" id="mediatheeklogocontainer">
+            <h2 id="mediatheeklogo1"> de mediatheek</h2>
+            <h2 id="mediatheeklogo2"> wil je nu wat weten?</h2>
+        </div>
+    </a>
     <div id="search-container" class="col-6">
         <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
             <?php echo search_form(array('show_advanced' => true)); ?>
         <?php else: ?>
             <?php echo search_form(); ?>
         <?php endif; ?>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 breadcrumbs hidden-sm">
+        <h4 class="breadcrumb"><?php echo link_to_home_page(__('Home')); ?></h4>
+        <h4 class="breadcrumb"><?php echo link_to('exhibits', '', 'Tentoonstellingen');?></h4>
+        <h4 class="breadcrumb"><?php echo link_to('exhibit/'.$exhibit,'',$exhibit)?></h4>
+        <h4 class="breadcrumb"><?php echo metadata('exhibit_page','title')?></h4>
+
     </div>
 </div>
 <div class="row">
