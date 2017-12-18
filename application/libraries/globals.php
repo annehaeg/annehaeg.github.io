@@ -1298,7 +1298,7 @@ function random_featured_collection()
         $html = get_view()->partial('collections/single.php', array('collection' => $collection));
         release_object($collection);
     } else {
-        $html = '<p>' . __('No featured collections are available.') . '</p>';
+        $html = '<p>' . __('Er zijn nog geen aanbevolen collecties.') . '</p>';
     }
     return $html;
 }
@@ -2294,7 +2294,7 @@ function recent_items($count = 10)
             release_object($item);
         }
     } else {
-        $html = '<p>' . __('No recent items available.') . '</p>';
+        $html = '<p>' . __('Er zijn nog geen recente items.') . '</p>';
     }
     return $html;
 }
@@ -2320,7 +2320,7 @@ function random_featured_items($count = 5, $hasImage = null)
             release_object($item);
         }
     } else {
-        $html = '<p>' . __('No featured items are available.') . '</p>';
+        $html = '<p>' . __('Er zijn nog geen aanbevolen items.') . '</p>';
     }
     return $html;
 }

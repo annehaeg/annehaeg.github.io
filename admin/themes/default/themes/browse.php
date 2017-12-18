@@ -6,7 +6,7 @@ echo flash();
 if ($current->image) {
     $currentScreenshot = html_escape($current->image);
 } else {
-    $currentScreenshot = img('fallback-theme.png');
+    $currentScreenshot = img('fallback-theme.jpg');
 }
 ?>
 
@@ -36,7 +36,7 @@ foreach ($themes as $theme):
     if ($theme->image) {
         $themeScreenshot = html_escape($theme->image);
     } else {
-        $themeScreenshot = img('fallback-theme.png');
+        $themeScreenshot = img('fallback-theme.jpg');
     }
 ?>
         <div class="theme three columns<?php if ($i++ % 3) echo ' alpha'; ?>">

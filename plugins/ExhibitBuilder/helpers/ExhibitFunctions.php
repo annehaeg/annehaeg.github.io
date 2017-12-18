@@ -148,11 +148,11 @@ function exhibit_builder_display_random_featured_exhibit()
 {
     $html = '<div id="featured-exhibit">';
     $featuredExhibit = exhibit_builder_random_featured_exhibit();
-    $html .= '<h2>' . __('Featured Exhibit') . '</h2>';
+    $html .= '<h2>' . __('Aanbevolen Tentoonstelling') . '</h2>';
     if ($featuredExhibit) {
         $html .= get_view()->partial('exhibits/single.php', array('exhibit' => $featuredExhibit));
     } else {
-        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
+        $html .= '<p>' . __('Er zijn nog geen aanbevolen tentoonstellingen.') . '</p>';
     }
     $html .= '</div>';
     $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
